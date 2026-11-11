@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Student Information Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>MMUST University</h2>
+        <h1>Student Information Portal</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#registration">Student Registration</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to the MMUST University Student Information Portal. Use the menu above to learn about the portal, register as a student, or get in touch with us.</p>
+        </section>
+
+        <section id="about">
+            <h2>About the Portal</h2>
+            <p>
+                The Student Information Portal is an online platform that allows
+                students to register, view their academic records and access
+                important university information in one convenient place. It helps
+                the university manage student data efficiently and keeps students
+                connected to the services they need throughout their studies.
+            </p>
+
+            <h3>Academic Programmes Offered</h3>
+            <ul>
+                <li>Bachelor of Science in Computer Science</li>
+                <li>Bachelor of Business Administration</li>
+                <li>Bachelor of Education (Science)</li>
+                <li>Bachelor of Science in Nursing</li>
+            </ul>
+        </section>
+
+        <section id="students">
+            <h2>Student Information</h2>
+            <table>
+                <caption>Registered Students</caption>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Student Name</th>
+                        <th>Registration Number</th>
+                        <th>Programme</th>
+                        <th>Year of Study</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S001</td>
+                        <td>Juma Tychicus</td>
+                        <td>COM/B/01-04803/2024</td>
+                        <td>Bachelor of Science in Computer Science</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>S002</td>
+                        <td>Brian Otieno</td>
+                        <td>BA/B/01-04803/2025</td>
+                        <td>Bachelor of Business Administration</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>S003</td>
+                        <td>Grace Muthoni</td>
+                        <td>NU/B/01-04803/2026</td>
+                        <td>Bachelor of Science in Nursing</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="registration">
+            <h2>Student Registration</h2>
+            <form id="registrationForm" action="#" method="post" novalidate>
+
+                <p>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname"
+                           placeholder="Enter your full name" required>
+                </p>
+
+                <p>
+                    <label for="regno">Registration Number:</label>
+                    <input type="text" id="regno" name="regno"
+                           placeholder="e.g. CS/2023/001" required>
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="name@example.com" required>
+                </p>
+
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </fieldset>
+
+                <p>
+                    <label for="programme">Academic Programme:</label>
+                    <select id="programme" name="programme" required>
+                        <option value="">-- Select a programme --</option>
+                        <option value="computer-science">Bachelor of Science in Computer Science</option>
+                        <option value="business-admin">Bachelor of Business Administration</option>
+                        <option value="education-science">Bachelor of Education (Science)</option>
+                        <option value="nursing">Bachelor of Science in Nursing</option>
+                    </select>
+                </p>
+
+                <p>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </p>
+
+            </form>
+
+            <div id="formMessage" role="alert" aria-live="polite"></div>
+
+            <div id="registrationResult"></div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>
+                <strong>MMUST University</strong><br>
+                P.O. Box 190-50100, Kakamega, Kenya<br>
+                Along Kakamega-Webuye Highway, Kakamega<br>
+                Phone: +254 702 597 360 / +254 733 120 020<br>
+                Email: info@mmust.ac.ke
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
